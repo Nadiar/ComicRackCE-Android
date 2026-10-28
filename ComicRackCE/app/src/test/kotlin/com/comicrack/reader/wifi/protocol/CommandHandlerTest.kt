@@ -1,10 +1,12 @@
 package com.comicrack.wifi.protocol
 
+import com.comicrack.wifi.SyncIdentity
 import com.comicrack.wifi.file.FileManager
 import com.comicrack.wifi.progress.SyncProgressTracker
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertArrayEquals
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
@@ -271,26 +273,24 @@ class CommandHandlerTest {
     // ==========================================================================
 
     @Test
-    fun `handleInfo sends sync version and reads server info`() =
+    fun `handleInfo reads desktop version and replies with device identity`() =
         runTest {
-            // Server sends: licensed (bool), version (int), key (string), flag (bool)
-            val serverResponse = ByteArrayOutputStream()
-            val serverCodec = ProtocolCodec(ByteArrayInputStream(byteArrayOf()), serverResponse)
-            serverCodec.writeBoolean(true) // licensed
-            serverCodec.writeInt(100) // version
-            serverCodec.writeString("key") // key
-            serverCodec.writeBoolean(false) // flag
+            // Desktop sends its sync version (int)
+            val desktopRequest = ByteArrayOutputStream()
+            ProtocolCodec(ByteArrayInputStream(byteArrayOf()), desktopRequest).writeInt(100)
 
-            val input = ByteArrayInputStream(serverResponse.toByteArray())
+            val input = ByteArrayInputStream(desktopRequest.toByteArray())
             val output = ByteArrayOutputStream()
             val codec = ProtocolCodec(input, output)
 
             handler.handle(Command.Info, codec)
 
-            // Verify we sent sync version (int)
+            // Device replies: licensed (bool), version (int), key (string), flag (bool)
             val resultCodec = ProtocolCodec(ByteArrayInputStream(output.toByteArray()), ByteArrayOutputStream())
-            val syncVersion = resultCodec.readInt()
-            assertEquals(1, syncVersion) // Current sync protocol version
+            assertTrue(resultCodec.readBoolean())
+            assertEquals(SyncIdentity.SYNC_VERSION, resultCodec.readInt())
+            assertEquals("test-device-key", resultCodec.readString())
+            assertFalse(resultCodec.readBoolean())
         }
 
     // ==========================================================================

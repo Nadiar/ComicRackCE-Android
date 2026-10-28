@@ -12,9 +12,12 @@ import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.kotlin.any
 import org.mockito.kotlin.mock
+import org.mockito.kotlin.whenever
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
+import java.io.FileNotFoundException
 
 /**
  * Tests for SyncFileManager - SAF-based file operations.
@@ -106,8 +109,9 @@ class FileManagerTest {
     @Test
     fun `readFile returns null for non-existent file`() =
         runTest {
-            // When file doesn't exist, readFile returns null
-            // This is tested via mock behavior
+            // SAF reports a missing document by throwing from source()
+            whenever(safFileSystem.source(any())).thenAnswer { throw FileNotFoundException("nonexistent.cbp") }
+
             val result = fileManager.readFile("nonexistent.cbp")
             assertNull(result)
         }
