@@ -1,0 +1,217 @@
+# ============================================
+# Default: ignore all dotfiles and dotfolders
+# ============================================
+.*/
+.*
+
+# Explicitly allow required dotfiles/dotfolders
+!.github/
+!.gitignore
+!.gitattributes
+!.editorconfig
+.github/ctags/
+
+# ============================================
+# OS-specific files
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ============================================
+# Gradle and build artifacts
+# ============================================
+.gradle/
+**/build/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# Gradle cache and temporary files
+.gradle
+/gradle/caches/
+/gradle/wrapper/dists/
+gradle-app.setting
+gradle-dist/
+gradle-*.*/
+gradle-*-bin.zip
+
+# ============================================
+# Android build outputs
+# ============================================
+*.apk
+*.ap_
+*.aab
+*.aar
+*.jar
+*.class
+*.dex
+*.so
+*.o
+
+# Explicitly ignore build directories
+/src/app/build/
+**/app/build/
+**/intermediates/
+**/generated/
+**/outputs/
+**/tmp/
+
+# ============================================
+# Android Studio / IntelliJ IDEA
+# ============================================
+*.iml
+*.iws
+*.ipr
+.idea/
+/.idea/
+.idea/*
+
+# Keep specific IDEA configs if needed (currently excluded)
+# !.idea/codeStyles/
+# !.idea/inspectionProfiles/
+# !.idea/runConfigurations/
+
+# ============================================
+# Native build
+# ============================================
+.externalNativeBuild/
+.cxx/
+obj/
+libs/*.so
+
+# ============================================
+# KSP (Kotlin Symbol Processing)
+# ============================================
+**/kspCaches/
+**/generated/ksp/
+
+# ============================================
+# Android-specific
+# ============================================
+local.properties
+proguard/
+*.hprof
+
+# Android Studio captures
+captures/
+*.log
+
+# Signing keys and credentials
+*.jks
+*.keystore
+*.keystore.*
+*.p12
+*.pem
+.env
+.env.*
+secrets.properties
+
+# Local Android SDK (machine-specific)
+android_sdk/
+
+# ============================================
+# Testing
+# ============================================
+*.test
+test-results/
+*.coverage
+
+# ============================================
+# VS Code
+# ============================================
+.vscode/
+*.code-workspace
+
+# ============================================
+# Python (if used for tooling)
+# ============================================
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ============================================
+# Node (if used for tooling)
+# ============================================
+node_modules/
+package-lock.json
+yarn.lock
+
+# ============================================
+# Ctags
+# ============================================
+tags
+tags.json
+tags-*.json
+!.github/ctags/
+
+# ============================================
+# Temporary and editor files
+# ============================================
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+*.temp
+
+# ============================================
+# Custom build logs and artifacts
+# ============================================
+build*.txt
+applogs/
+src/build*.*
+src/build_log_*.txt
+src/tools/smoke-log-*.txt
+temp_resources/
+
+# ============================================
+# Backup files
+# ============================================
+*.zip
+*.tar
+*.tar.gz
+*.rar
+# Except gradle wrapper
+!gradle/wrapper/*.jar
+
+
+
+
+# Ctags generated files
+
+# Ignore legacy java
+ComicRackCE/app/src/main/badcoffee/
+ComicRackCE/tools/pcap_payload.txt
+ComicRackCE/tools/decode_ini.py
+ComicRackCE/tools/verify_hash.py
+ComicRackCE/tools/test_trimmed_hex.kt
+.github/workflows/commented-code-check.yml
+.github/workflows/public-docs-report.yml
+
+# ============================================
+# Debug captures, device dumps, and reports
+# ============================================
+*.pcap
+*.pcapng
+*logcat*
+logcat.pid
+*.db
+*.sqlite
+*.bin
+*.pb
+*.jadx
+sync_capture_*.txt
+detekt-*.txt
+**/tools/captures/
+**/smoke-aggregate/
+gradle-config-backup-*.zip

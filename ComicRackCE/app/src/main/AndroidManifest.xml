@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:versionCode="103"
+    android:versionName="1.80"
+    android:installLocation="auto">
+    <!-- Removed redundant uses-sdk (managed by Gradle) -->
+    <!-- Removed deprecated storage permissions (minSdkVersion 29+) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" android:foregroundServiceType="dataSync" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    
+    <!-- All Files Access - required for Android 11+ when SAF picker doesn't work -->
+    <!-- User must manually grant in Settings > Apps > ComicRack > Permissions > Files -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+        </intent>
+        <package android:name="com.google.android.documentsui" />
+    </queries>
+
+    <application
+        android:name="com.comicrack.ComicRackApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:requestLegacyExternalStorage="true"
+        tools:replace="android:allowBackup">
+
+        <!-- Remove WorkManagerInitializer since we use Configuration.Provider -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="remove"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Test-only receiver to allow smoke-test to start the WifiSyncService deterministically -->
+        <!-- Usage: adb shell am broadcast -a com.comicrack.viewer.DEBUG_START_SYNC -n com.comicrack.viewer/.DebugStartReceiver -->
+        <receiver android:name="com.comicrack.reader.DebugStartReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.comicrack.viewer.DEBUG_START_SYNC" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Project Delta: New Compose-based Library Activity (Launcher) -->
+        <activity
+            android:name="com.comicrack.reader.ComposeLibraryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard">
+            <!-- Launcher intent: open app from home screen -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <!-- Allow some file managers to open /sdcard/Comics or /sdcard/Documents/Comics directly -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="file" android:host="*" android:pathPrefix="/sdcard/Comics"/>
+                <data android:scheme="file" android:host="*" android:pathPrefix="/sdcard/Documents/Comics"/>
+                <data android:mimeType="vnd.android.document/directory"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:theme="@style/Fullscreen"
+            android:name="com.comicrack.reader.ComicViewerActivity"
+            android:exported="true"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard">
+            <!-- Intent filter for CBZ, CBR, ZIP, RAR, CBP (File & Content) -->
+            <intent-filter
+                android:label="@string/doc_name"
+                android:icon="@drawable/icon_doc"
+                android:priority="1">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+                <data android:host="*"/>
+                <data android:mimeType="*/*"/>
+                <!-- Patterns for file extensions -->
+                <data android:pathPattern=".*\\.cbz"/>
+                <data android:pathPattern=".*\\.cbp"/>
+                <data android:pathPattern=".*\\.cbr"/>
+                <data android:pathPattern=".*\\.zip"/>
+                <data android:pathPattern=".*\\.rar"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:theme="@style/SplashTheme"
+            android:name="com.comicrack.reader.SplashActivity"
+            android:exported="true"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard">
+        </activity>
+
+
+
+        <!-- Project Epsilon: SettingsActivity for preferences modernization -->
+        <activity
+            android:name="com.comicrack.settings.SettingsActivity"
+            android:exported="true"
+            android:label="Settings"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:parentActivityName="com.comicrack.reader.ComposeLibraryActivity"/>
+
+        <!-- Project Epsilon Phase 8 Task 5: Live Wallpaper Service -->
+        <service
+            android:name="com.comicrack.wallpaper.CoverWallpaperService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/wallpaper_name"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/wallpaper_config"/>
+        </service>
+
+        <!-- Project Gamma Phase 4.2: LibraryPickerActivity for SAF directory selection and scanning -->
+        <activity
+            android:name="com.comicrack.reader.LibraryPickerActivity"
+            android:exported="false"
+            android:label="Pick Library">
+        </activity>
+
+        <!-- WiFi Sync Service for legacy ComicRack CE integration -->
+        <service
+            android:name="com.comicrack.wifi.service.WiFiSyncService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="dataSync"
+            android:label="WiFi Sync Service">
+            <intent-filter>
+                <action android:name="com.comicrack.viewer.wifi.START_SYNC"/>
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

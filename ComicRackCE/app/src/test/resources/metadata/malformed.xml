@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComicBook>
+    <Title>Batman #1</Title>
+    <Series>Batman</Series>
+    <Number>1</Number>
+    <!-- Missing required closing tag below -->
+    <Count>1000
+    <Volume>1</Volume>
+    <Year>1940</Year>
+    <Penciller>Bob Kane</Penciller>
+</ComicBook>

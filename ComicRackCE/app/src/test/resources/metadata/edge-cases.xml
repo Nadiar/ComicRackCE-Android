@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComicBook>
+    <!-- Test empty/whitespace fields -->
+    <Title>  </Title>
+    <Series></Series>
+    <Number>42</Number>
+    <!-- Test boolean variations -->
+    <BlackAndWhite>Yes</BlackAndWhite>
+    <Manga>true</Manga>
+    <!-- Test multiple values -->
+    <Writer>Writer 1, Writer 2, Writer 3</Writer>
+    <Penciller>Artist 1|Artist 2|Artist 3</Penciller>
+    <!-- Test special characters -->
+    <Summary>This is a summary with &lt;special&gt; &amp; characters "quoted"</Summary>
+    <!-- Test edge case numbers -->
+    <CommunityRating>4.5</CommunityRating>
+    <PageCount>0</PageCount>
+    <Year>2099</Year>
+</ComicBook>

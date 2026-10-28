@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Legacy toolbar styles removed - using MaterialComponents themes instead -->
+    <style name="ShadowText" parent="">
+        <item name="android:shadowColor">#ff000000</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">3</item>
+    </style>
+    <style name="ListCaption" parent="@android:style/Widget.TextView">
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textColor">@color/list_caption_text</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <style name="TextAppearance.MediumDefault" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/comic_list_bigtext</item>
+    </style>
+    <style name="TextAppearance.SmallDefault" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@color/comic_list_text</item>
+    </style>
+    <style name="TextAppearance.VerySmall" parent="@style/TextAppearance.SmallDefault">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="TextAppearance.SemiLarge" parent="@style/TextAppearance.MediumDefault">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <!-- RatingBar.Book removed - using Compose rating component instead -->
+    <style name="ThumbnailGallery" parent="@android:style/Widget.Gallery">
+        <item name="android:spacing">0dp</item>
+    </style>
+    <style name="stylePageNumber" parent="@android:style/Widget.TextView">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <!-- Modern Material Components app theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
+    </style>
+
+    <style name="Fullscreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Preserve fullscreen behavior while using MaterialComponents theme -->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="Defaultscreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    </style>
+    <style name="DefaultDialog" parent="Theme.MaterialComponents.DayNight.Dialog">
+    </style>
+    <style name="DefaultDialogLight" parent="Theme.MaterialComponents.DayNight.Dialog">
+    </style>
+    <style name="DefaultPreferenceDialog" parent="Theme.MaterialComponents.DayNight.Dialog">
+    </style>
+    <style name="SplashTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@android:color/black</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+    </style>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material palette - Dark theme (Material 3 DayNight support) -->
+    <!-- These override the light theme colors when system dark mode is enabled -->
+    <color name="colorPrimary">#FF5F7FFF</color>
+    <color name="colorPrimaryVariant">#FF9FA8FF</color>
+    <color name="colorOnPrimary">#FF0E1C5C</color>
+    <color name="colorSecondary">#FF4DD0E1</color>
+    <color name="colorOnSecondary">#FF003C47</color>
+
+    <!-- Legacy color overrides for dark mode -->
+    <color name="toolbar_top">#ff1a1a1a</color>
+    <color name="read_current">#ff00d960</color>
+    <color name="read_maximum">#ff006633</color>
+    <color name="read_background">#ff4d4d4d</color>
+    <color name="list_caption_text">#ffffa500</color>
+    <color name="list_caption_text_dark">#ffcc8800</color>
+    <color name="list_item_selected">#ffffa500</color>
+    <color name="list_item_checked">#c0ffa500</color>
+    <color name="list_divider_light">#ff595959</color>
+    <color name="reader_hot_overlay_color">#408080ff</color>
+    <color name="comic_list_bigtext">#fff0f0f0</color>
+    <color name="comic_list_text">#ffc0c0c0</color>
+    <color name="black_transparent_40">#50ffffff</color>
+    <color name="comic_list_background_dark">#ff1a1a1a</color>
+    <color name="comic_list_background_light">#ff2d2d2d</color>
+    <color name="library_list_background_dark">#ff0d0d0d</color>
+    <color name="library_list_background_light">#ff1a1a1a</color>
+    <color name="comic_thumbnail_compact_text">#ffe6e6e6</color>
+
+    <!-- Material 3 Color Scheme (Dark) for Compose -->
+    <color name="m3_primary">#FF1E3A5F</color>
+    <color name="m3_onPrimary">#FFFFFFFF</color>
+    <color name="m3_primaryContainer">#FF2C5282</color>
+    <color name="m3_onPrimaryContainer">#FFB3D9FF</color>
+    <color name="m3_secondary">#FFBB86FC</color>
+    <color name="m3_onSecondary">#FF000000</color>
+    <color name="m3_secondaryContainer">#FF7E57C2</color>
+    <color name="m3_onSecondaryContainer">#FFFFFFFF</color>
+    <color name="m3_tertiary">#FF03DAC5</color>
+    <color name="m3_onTertiary">#FF000000</color>
+    <color name="m3_tertiaryContainer">#FF03DAC5</color>
+    <color name="m3_onTertiaryContainer">#FF000000</color>
+    <color name="m3_background">#FF121212</color>
+    <color name="m3_onBackground">#FFFFFFFF</color>
+    <color name="m3_surface">#FF1E1E1E</color>
+    <color name="m3_onSurface">#FFFFFFFF</color>
+    <color name="m3_surfaceVariant">#FF49454F</color>
+    <color name="m3_onSurfaceVariant">#FFCAC7D0</color>
+    <color name="m3_outline">#FF938F99</color>
+    <color name="m3_outlineVariant">#FF49454F</color>
+    <color name="m3_error">#FFDE6969</color>
+    <color name="m3_onError">#FF570604</color>
+    <color name="m3_errorContainer">#FF78100B</color>
+    <color name="m3_onErrorContainer">#FFFFDAD6</color>
+</resources>

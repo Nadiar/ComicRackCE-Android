@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header
+        android:title="@string/preferences_header_general_title"
+        android:summary="@string/preferences_header_general_summary"
+        android:fragment="com.com.comicrack.viewer.ComicRackPreferencesActivity$GeneralFragment"/>
+    <header
+        android:title="@string/preferences_header_display_title"
+        android:summary="@string/preferences_header_display_summary"
+        android:fragment="com.com.comicrack.viewer.ComicRackPreferencesActivity$DisplayFragment"/>
+    <header
+        android:title="@string/preferences_header_input_title"
+        android:summary="@string/preferences_header_input_summary"
+        android:fragment="com.com.comicrack.viewer.ComicRackPreferencesActivity$InputFragment"/>
+    <header
+        android:title="@string/preferences_header_wallpaper_title"
+        android:summary="@string/preferences_header_wallpaper_summary"
+        android:fragment="com.com.comicrack.viewer.ComicRackPreferencesActivity$WallpaperFragment"/>
+</preference-headers>

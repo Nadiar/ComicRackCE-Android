@@ -1,0 +1,2 @@
+ALTER TABLE books ADD Day INTEGER;
+UPDATE books SET Day = -1;

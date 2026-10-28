@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Minimal test theme used to stabilize ReaderActivity in instrumentation tests -->
+    <style name="TestReaderTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#FF212121</item>
+        <item name="colorPrimaryDark">#FF000000</item>
+        <item name="colorAccent">#FF4080FF</item>
+        <item name="android:windowBackground">#FF000000</item>
+    </style>
+</resources>

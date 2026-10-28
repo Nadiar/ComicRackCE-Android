@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- IDs missing from resources; added to satisfy references in fs.java -->
+    <item type="id" name="folderList"/>
+    <item type="id" name="folderText"/>
+    <item type="id" name="folderUp"/>
+    <item type="id" name="folderCreate"/>
+    <item type="id" name="folderDelete"/>
+    <item type="id" name="folderHome"/>
+    <item type="id" name="folderLayoutButtons"/>
+    <item type="id" name="splashCopyright"/>
+    <item type="id" name="splashLogo"/>
+    <item type="id" name="splashMainContainer"/>
+</resources>

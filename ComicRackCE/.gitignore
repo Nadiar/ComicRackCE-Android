@@ -1,0 +1,63 @@
+# ============================================
+# Gradle and Build Outputs
+# ============================================
+.gradle/
+build/
+*.apk
+*.aab
+*.aar
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+*.class
+*.dex
+*.so
+
+# ============================================
+# Build Logs and Reports (prevent accumulation)
+# ============================================
+build_*.txt
+build_*.log
+build-log*.txt
+build_output*.txt
+test_output.txt
+test_output*.txt
+*.log
+
+# ============================================
+# IDE and Editor
+# ============================================
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+*.swo
+*~
+
+# ============================================
+# OS
+# ============================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================
+# Local configuration (should not be committed)
+# ============================================
+local.properties
+gradle.properties
+
+# ============================================
+# Kotlin/KSP Generated Code
+# ============================================
+**/kspCaches/
+**/generated/
+**/intermediates/
+
+# ============================================
+# Android Native Build
+# ============================================
+.externalNativeBuild/
+.cxx/
+obj/

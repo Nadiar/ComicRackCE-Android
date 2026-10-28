@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="autoCropType">
+        <item>@string/autocrop_styles_none</item>
+        <item>@string/autocrop_styles_medium</item>
+        <item>@string/autocrop_styles_all</item>
+    </array>
+    <array name="autoCropTypeValues">
+        <item>None</item>
+        <item>Medium</item>
+        <item>All</item>
+    </array>
+    <array name="transitionStyles">
+        <item>@string/none</item>
+        <item>@string/transition_styles_slide</item>
+        <item>@string/transition_styles_deck</item>
+        <item>@string/transition_styles_fade</item>
+        <item>@string/transition_styles_stack</item>
+    </array>
+    <array name="transitionStylesValues">
+        <item>None</item>
+        <item>Slide</item>
+        <item>Deck</item>
+        <item>Fade</item>
+        <item>Stack</item>
+    </array>
+    <array name="backgroundColorStyles">
+        <item>@string/background_color_styles_page</item>
+        <item>@string/background_color_styles_white</item>
+        <item>@string/background_color_styles_black</item>
+    </array>
+    <array name="backgroundColorStylesValues">
+        <item>Page</item>
+        <item>White</item>
+        <item>Black</item>
+    </array>
+    <array name="readerAction">
+        <item>@string/reader_action_none</item>
+        <item>@string/reader_action_menu</item>
+        <item>@string/reader_action_next_part</item>
+        <item>@string/reader_action_previous_part</item>
+        <item>@string/reader_action_next_page</item>
+        <item>@string/reader_action_previous_page</item>
+        <item>@string/reader_action_first_page</item>
+        <item>@string/reader_action_last_page</item>
+        <item>@string/reader_action_next_bookmark</item>
+        <item>@string/reader_action_previous_bookmark</item>
+        <item>@string/reader_action_bookmarks</item>
+        <item>@string/reader_action_goto_page</item>
+        <item>@string/reader_action_next_comic</item>
+        <item>@string/reader_action_previous_comic</item>
+        <item>@string/reader_action_toggle_double_page</item>
+        <item>@string/reader_action_switch_fitting_mode</item>
+        <item>@string/reader_action_toggle_brightness</item>
+        <item>@string/reader_action_adjust_colors</item>
+        <item>@string/reader_action_switch_rotation</item>
+        <item>@string/reader_action_toggle_landscape_portrait</item>
+        <item>@string/reader_action_show_zoom</item>
+        <item>@string/reader_action_snapshot</item>
+        <item>@string/rate_ecomic</item>
+        <item>@string/reader_action_change_page_type</item>
+        <item>@string/reader_action_back_to_library</item>
+    </array>
+    <array name="readerActionValues">
+        <item>None</item>
+        <item>Menu</item>
+        <item>NextPart</item>
+        <item>PreviousPart</item>
+        <item>NextPage</item>
+        <item>PreviousPage</item>
+        <item>FirstPage</item>
+        <item>LastPage</item>
+        <item>NextBookmark</item>
+        <item>PreviousBookmark</item>
+        <item>Bookmarks</item>
+        <item>GotoPage</item>
+        <item>NextComic</item>
+        <item>PreviousComic</item>
+        <item>ToggleDoublePage</item>
+        <item>SwitchFittingMode</item>
+        <item>ToggleBrightness</item>
+        <item>AdjustColors</item>
+        <item>SwitchRotation</item>
+        <item>ToggleLandscapePortrait</item>
+        <item>ShowZoom</item>
+        <item>Snapshot</item>
+        <item>RateBook</item>
+        <item>ChangePageType</item>
+        <item>BackToLibrary</item>
+    </array>
+    <array name="readerRotation">
+        <item>@string/reader_rotation_user</item>
+        <item>@string/reader_rotation_portrait</item>
+        <item>@string/reader_rotation_landscape</item>
+        <item>@string/reader_rotation_autorotate</item>
+    </array>
+    <array name="readerRotationValues">
+        <item>User</item>
+        <item>Portrait</item>
+        <item>Landscape</item>
+        <item>Autorotate</item>
+    </array>
+    <array name="pageType">
+        <item>@string/page_type_frontcover</item>
+        <item>@string/page_type_innercover</item>
+        <item>@string/page_type_roundup</item>
+        <item>@string/page_type_story</item>
+        <item>@string/page_type_advertisement</item>
+        <item>@string/page_type_editorial</item>
+        <item>@string/page_type_letters</item>
+        <item>@string/page_type_preview</item>
+        <item>@string/page_type_backcover</item>
+        <item>@string/page_type_other</item>
+        <item>@string/page_type_deleted</item>
+    </array>
+    <array name="pageTypeValues">
+        <item>FrontCover</item>
+        <item>InnerCover</item>
+        <item>Roundup</item>
+        <item>Story</item>
+        <item>Advertisement</item>
+        <item>Editorial</item>
+        <item>Letters</item>
+        <item>Preview</item>
+        <item>BackCover</item>
+        <item>Other</item>
+        <item>Deleted</item>
+    </array>
+    <array name="autoChange">
+        <item>@string/never</item>
+        <item>@string/seconds_10</item>
+        <item>@string/seconds_30</item>
+        <item>@string/minutes_1</item>
+        <item>@string/minutes_5</item>
+        <item>@string/minutes_15</item>
+        <item>@string/minutes_30</item>
+        <item>@string/minutes_60</item>
+    </array>
+    <array name="autoChangeValues">
+        <item>0</item>
+        <item>10</item>
+        <item>30</item>
+        <item>60</item>
+        <item>300</item>
+        <item>900</item>
+        <item>1800</item>
+        <item>3600</item>
+    </array>
+    <array name="comicSelection">
+        <item>@string/comic_selection_favorites</item>
+        <item>@string/comic_selection_new</item>
+        <item>@string/comic_selection_unread</item>
+        <item>@string/comic_selection_reading</item>
+    </array>
+    <array name="comicSelectionValues">
+        <item>Favorites</item>
+        <item>New</item>
+        <item>Unread</item>
+        <item>Reading</item>
+    </array>
+    <array name="wallpaperAnimation">
+        <item>@string/off</item>
+        <item>@string/slow</item>
+        <item>@string/medium</item>
+        <item>@string/fast</item>
+        <item>@string/random</item>
+    </array>
+    <array name="wallpaperAnimationValues">
+        <item>Off</item>
+        <item>Slow</item>
+        <item>Medium</item>
+        <item>Fast</item>
+        <item>Random</item>
+    </array>
+    <array name="widgetShowCover">
+        <item>@string/none</item>
+        <item>@string/small</item>
+        <item>@string/medium</item>
+        <item>@string/large</item>
+    </array>
+    <array name="widgetShowCoverValues">
+        <item>None</item>
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </array>
+    <array name="widgetShowCaption">
+        <item>@string/none</item>
+        <item>@string/white</item>
+        <item>@string/black</item>
+        <item>@string/transparent</item>
+    </array>
+    <array name="widgetShowCaptionValues">
+        <item>None</item>
+        <item>White</item>
+        <item>Black</item>
+        <item>Transparent</item>
+    </array>
+    <array name="comicTapAction">
+        <item>@string/none</item>
+        <item>@string/read</item>
+        <item>@string/open_series</item>
+        <item>@string/open_story</item>
+        <item>@string/open_writer</item>
+        <item>@string/open_comicrack</item>
+    </array>
+    <array name="comicTapActionValues">
+        <item>None</item>
+        <item>Read</item>
+        <item>OpenSeries</item>
+        <item>OpenStory</item>
+        <item>OpenWriter</item>
+        <item>OpenComicRack</item>
+    </array>
+</resources>

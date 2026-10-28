@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material palette (added by feature/theme-material-components) -->
+    <color name="colorPrimary">#FF1E88E5</color>
+    <color name="colorPrimaryVariant">#FF1565C0</color>
+    <color name="colorOnPrimary">#FFFFFFFF</color>
+    <color name="colorSecondary">#FF00ACC1</color>
+    <color name="colorOnSecondary">#FFFFFFFF</color>
+
+    <color name="toolbar_top">#d0000000</color>
+    <color name="read_current">#ff008000</color>
+    <color name="read_maximum">#ff004000</color>
+    <color name="read_background">#ff808080</color>
+    <color name="list_caption_text">#ffff9c00</color>
+    <color name="list_caption_text_dark">#ffad6c05</color>
+    <color name="list_item_selected">#ffff9c00</color>
+    <color name="list_item_checked">#c0ff9c00</color>
+    <color name="list_divider_light">#ff808080</color>
+    <color name="reader_hot_overlay_color">#408080ff</color>
+    <color name="comic_list_bigtext">#ffffffff</color>
+    <color name="comic_list_text">#ffbcbcbc</color>
+    <color name="black_transparent_40">#50000000</color>
+    <color name="comic_list_background_dark">#ff303030</color>
+    <color name="comic_list_background_light">#ff404040</color>
+    <color name="library_list_background_dark">#ff101010</color>
+    <color name="library_list_background_light">#ff202020</color>
+    <color name="comic_thumbnail_compact_text">#80000000</color>
+
+    <!-- Material 3 Color Scheme (Light) for Compose -->
+    <color name="m3_primary">#FFC9A961</color>
+    <color name="m3_onPrimary">#FFFFFFFF</color>
+    <color name="m3_primaryContainer">#FFE8D5B7</color>
+    <color name="m3_onPrimaryContainer">#FF3E2C1A</color>
+    <color name="m3_secondary">#FF996633</color>
+    <color name="m3_onSecondary">#FFFFFFFF</color>
+    <color name="m3_secondaryContainer">#FFB8956F</color>
+    <color name="m3_onSecondaryContainer">#FF3E2C1A</color>
+    <color name="m3_tertiary">#FF666666</color>
+    <color name="m3_onTertiary">#FFFFFFFF</color>
+    <color name="m3_tertiaryContainer">#FF999999</color>
+    <color name="m3_onTertiaryContainer">#FFFFFFFF</color>
+    <color name="m3_background">#FFFAFAF8</color>
+    <color name="m3_onBackground">#FF1A1A1A</color>
+    <color name="m3_surface">#FFFAFAF8</color>
+    <color name="m3_onSurface">#FF1A1A1A</color>
+    <color name="m3_surfaceVariant">#FFE7E0EC</color>
+    <color name="m3_onSurfaceVariant">#FF49454F</color>
+    <color name="m3_outline">#FF79747E</color>
+    <color name="m3_outlineVariant">#FFCAC7D0</color>
+    <color name="m3_error">#FFB3261E</color>
+    <color name="m3_onError">#FFFFFFFF</color>
+    <color name="m3_errorContainer">#FFF9DEDC</color>
+    <color name="m3_onErrorContainer">#FF410E0B</color>
+</resources>

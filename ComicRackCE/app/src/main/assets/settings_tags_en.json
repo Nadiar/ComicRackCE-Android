@@ -1,0 +1,132 @@
+{
+  "rtl_mode": [
+    "RTL", "LTR", "Reading Direction", "Manga", "Arabic", "Hebrew", "Farsi", "Urdu",
+    "Right-to-Left", "Left-to-Right", "Bidirectional", "Language"
+  ],
+  "language_selection": [
+    "Localization", "Language", "International", "UI Language", "App Language", "i18n"
+  ],
+  "dark_mode": [
+    "Theme", "Appearance", "Dark", "Light", "OLED", "Battery", "Eye Strain"
+  ],
+  "page_transition_effect": [
+    "Animation", "Navigation", "Transition", "Page Turn", "Smooth", "Effect"
+  ],
+  "zoom_mode": [
+    "Zoom", "Fit", "Magnification", "Scale", "Page Width", "Aspect Ratio"
+  ],
+  "double_tap_zoom": [
+    "Zoom", "Gesture", "Double Tap", "Magnify", "Interactive"
+  ],
+  "pinch_zoom": [
+    "Zoom", "Gesture", "Pinch", "Magnify", "Multi-Touch", "Pinch Zoom"
+  ],
+  "swipe_navigation": [
+    "Navigation", "Gesture", "Swipe", "Page Turning", "Direction", "Swiping"
+  ],
+  "swipe_direction": [
+    "Navigation", "Reading Direction", "Right to Left", "Left to Right", "Direction", "Swiping"
+  ],
+  "brightness": [
+    "Display", "Screen", "Light", "Brightness", "Eye Comfort", "Visibility"
+  ],
+  "contrast": [
+    "Display", "Screen", "Readability", "Contrast", "Visibility"
+  ],
+  "sepia": [
+    "Filter", "Color", "Sepia Tone", "Warm", "Display", "Eye Strain"
+  ],
+  "margin_size": [
+    "Layout", "Padding", "Spacing", "Borders", "Margins", "Whitespace"
+  ],
+  "animate_transitions": [
+    "Animation", "Smooth", "Transition", "Effect", "Motion"
+  ],
+  "auto_scroll": [
+    "Navigation", "Scrolling", "Automatic", "Reading", "Hands-Free", "Continuous Reading"
+  ],
+  "auto_scroll_speed": [
+    "Speed", "Scrolling", "Automatic", "Reading", "Pace"
+  ],
+  "invert_colors": [
+    "Display", "Accessibility", "Dark", "Invert", "Colors", "Negative", "Vision"
+  ],
+  "tap_zone_left": [
+    "Tap Zones", "Gestures", "Controls", "Touch", "Navigation", "Left"
+  ],
+  "tap_zone_right": [
+    "Tap Zones", "Gestures", "Controls", "Touch", "Navigation", "Right"
+  ],
+  "tap_zone_top": [
+    "Tap Zones", "Gestures", "Controls", "Touch", "Navigation", "Top"
+  ],
+  "tap_zone_bottom": [
+    "Tap Zones", "Gestures", "Controls", "Touch", "Navigation", "Bottom"
+  ],
+  "tap_zone_size": [
+    "Tap Zones", "Size", "Area", "Hit Target", "Touch Sensitivity"
+  ],
+  "haptic_feedback_enabled": [
+    "Haptics", "Vibration", "Feedback", "Touch Response", "Physical Feedback"
+  ],
+  "haptic_intensity": [
+    "Haptics", "Vibration", "Strength", "Intensity", "Feel"
+  ],
+  "volume_buttons_navigate": [
+    "Hardware Buttons", "Volume Buttons", "Navigation", "Page Turning", "Controls"
+  ],
+  "volume_up_action": [
+    "Hardware Buttons", "Volume Up", "Action", "Mapping", "Controls"
+  ],
+  "volume_down_action": [
+    "Hardware Buttons", "Volume Down", "Action", "Mapping", "Controls"
+  ],
+  "orientation_lock": [
+    "Display", "Orientation", "Portrait", "Landscape", "Rotation", "Auto-Rotate"
+  ],
+  "auto_page_turn_delay": [
+    "Auto-Read", "Delay", "Speed", "Timing", "Hands-Free", "Continuous Reading"
+  ],
+  "double_tap_delay": [
+    "Gesture", "Timing", "Sensitivity", "Response Time", "Double Tap"
+  ],
+  "long_press_delay": [
+    "Gesture", "Timing", "Sensitivity", "Response Time", "Long Press"
+  ],
+  "edge_gestures_enabled": [
+    "Gesture", "Edge", "Navigation", "Screen Edge", "Swipe"
+  ],
+  "edge_gesture_left": [
+    "Edge", "Gesture", "Left", "Navigation", "Action"
+  ],
+  "edge_gesture_right": [
+    "Edge", "Gesture", "Right", "Navigation", "Action"
+  ],
+  "edge_gesture_top": [
+    "Edge", "Gesture", "Top", "Navigation", "Action"
+  ],
+  "edge_gesture_bottom": [
+    "Edge", "Gesture", "Bottom", "Navigation", "Action"
+  ],
+  "bluetooth_support": [
+    "Wireless", "Bluetooth", "Device Connection", "Connectivity", "Remote"
+  ],
+  "gamepad_support": [
+    "Gamepad", "Controller", "Input Device", "Gaming", "Joystick"
+  ],
+  "gamepad_left_button": [
+    "Gamepad", "Button", "Control", "Action Mapping", "Left"
+  ],
+  "gamepad_right_button": [
+    "Gamepad", "Button", "Control", "Action Mapping", "Right"
+  ],
+  "wallpaper_enabled": [
+    "Wallpaper", "Background", "Home Screen", "Appearance", "Library View"
+  ],
+  "wallpaper_blur_radius": [
+    "Wallpaper", "Blur", "Effect", "Visual", "Background"
+  ],
+  "wallpaper_dimming": [
+    "Wallpaper", "Brightness", "Dimming", "Visibility", "Text Contrast"
+  ]
+}

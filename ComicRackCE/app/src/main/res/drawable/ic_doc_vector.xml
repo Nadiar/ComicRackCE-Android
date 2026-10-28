@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Base Document -->
+    <path
+        android:fillColor="#F5F5F5"
+        android:strokeColor="#333333"
+        android:strokeWidth="2"
+        android:pathData="M20,10 L60,10 L80,30 L80,90 L20,90 Z"/>
+    <path
+        android:fillColor="#E0E0E0"
+        android:strokeColor="#333333"
+        android:strokeWidth="2"
+        android:pathData="M60,10 L60,30 L80,30"/>
+
+    <!-- CR Logo Overlay (Scaled and Centered) -->
+    <!-- Original points roughly: 22,28 5,78 22,121... scaled down to fit 100x100 -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M25,35 L20,55 L25,75 L40,85 L35,95 L85,95 L95,25 L70,20 L60,10 L30,5 Z"/>
+</vector>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComicBook>
+    <Title>The Amazing Spider-Man #1</Title>
+    <Series>The Amazing Spider-Man</Series>
+    <Number>1</Number>
+    <Count>900</Count>
+    <Volume>1</Volume>
+    <Year>1963</Year>
+    <Month>6</Month>
+    <Day>15</Day>
+    <Writer>Stan Lee</Writer>
+    <Penciller>Steve Ditko</Penciller>
+    <Inker>Steve Ditko</Inker>
+    <Colorist>None</Colorist>
+    <Letterer>Artie Simek</Letterer>
+    <CoverArtist>Steve Ditko</CoverArtist>
+    <Publisher>Marvel Comics</Publisher>
+    <Imprint>Marvel</Imprint>
+    <Genre>Superhero,Action</Genre>
+    <Web>https://marvel.com/</Web>
+    <PageCount>20</PageCount>
+    <LanguageISO>en</LanguageISO>
+    <Format>Single</Format>
+    <BlackAndWhite>No</BlackAndWhite>
+    <Manga>No</Manga>
+    <Characters>Spider-Man,Uncle Ben,Aunt May</Characters>
+    <Teams>None</Teams>
+    <Locations>New York,Queens</Locations>
+    <Summary>The origin story of Spider-Man, following the transformation of Peter Parker from student to superhero.</Summary>
+    <Notes>First appearance of Spider-Man</Notes>
+    <CommunityRating>9.5</CommunityRating>
+    <ScanInformation>Digital scan from Marvel Masterworks</ScanInformation>
+    <Editor>Stan Lee</Editor>
+    <StoryArc>Origin</StoryArc>
+    <SeriesGroup>Marvel Universe</SeriesGroup>
+    <MainCharacterOrTeam>Spider-Man</MainCharacterOrTeam>
+    <AlternateSeries>Amazing Spider-Man (2015)</AlternateSeries>
+    <AlternateNumber>1</AlternateNumber>
+    <AlternateCount>50</AlternateCount>
+</ComicBook>

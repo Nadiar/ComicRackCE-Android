@@ -1,0 +1,50 @@
+// Gradle checks helper tasks
+
+// Use tasks.register and provider APIs to be configuration-cache friendly
+tasks.register('checkWrapper') {
+    description = 'Verify gradle-wrapper.jar contains a valid manifest with GradleWrapperMain'
+    doLast {
+        def wrapperFile = layout.projectDirectory.file('gradle/wrapper/gradle-wrapper.jar').asFile
+        if (!wrapperFile.exists()) {
+            println "gradle-wrapper.jar not found at ${wrapperFile.absolutePath}"
+            return
+        }
+        java.util.jar.JarFile jar = null
+        try {
+            jar = new java.util.jar.JarFile(wrapperFile)
+            def mf = jar.getManifest()
+            def mainClass = mf?.mainAttributes?.getValue('Main-Class')
+            if (!mainClass || !mainClass.contains('GradleWrapperMain')) {
+                // Fallback: if Main-Class is missing, check whether wrapper classes exist inside the jar
+                boolean foundFallback = false
+                java.util.jar.JarFile jar2 = null
+                try {
+                    jar2 = new java.util.jar.JarFile(wrapperFile)
+                    def entries = jar2.entries()
+                    while (entries.hasMoreElements()) {
+                        def name = entries.nextElement().getName()
+                        if (name == 'org/gradle/wrapper/BootstrapMainStarter.class' || name == 'org/gradle/wrapper/WrapperExecutor.class' || name == 'org/gradle/wrapper/GradleWrapperMain.class') {
+                            foundFallback = true
+                            break
+                        }
+                    }
+                } catch (e) {
+                    // ignore and fail below
+                } finally {
+                    if (jar2 != null) jar2.close()
+                }
+                if (!foundFallback) {
+                    throw new RuntimeException('gradle-wrapper.jar missing Main-Class GradleWrapperMain; wrapper may be corrupted. Re-generate with: gradle wrapper --gradle-version <version>')
+                } else {
+                    println "gradle-wrapper.jar does not have Main-Class but contains wrapper classes; accepting (Bootstrap/WrapperExecutor/GradleWrapperMain found)."
+                }
+            } else {
+                println "gradle-wrapper.jar looks good: Main-Class=${mainClass}"
+            }
+        } catch (e) {
+            throw new RuntimeException("Failed to read gradle-wrapper.jar manifest: ${e.message}")
+        } finally {
+            if (jar != null) jar.close()
+        }
+    }
+}

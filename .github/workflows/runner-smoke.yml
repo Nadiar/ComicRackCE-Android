@@ -1,0 +1,39 @@
+name: Runner smoke tests
+
+on:
+  push:
+    branches: [ main, master, 'cleanup/*', 'feature/*', 'chore/*' ]
+  pull_request:
+  schedule:
+    - cron: '0 3 * * *'  # nightly at 03:00 UTC
+
+jobs:
+  runner-smoke:
+    name: Runner smoke checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies (none required)
+        run: echo 'No extra dependencies required for runner smoke test'
+
+      - name: Run runner smoke test
+        run: |
+          python ComicRack-Android/.copilot/subagent-flow/scripts/test_runner_clean_exit.py
+        env:
+          # ensure runner uses local sim agents
+          SIM_AGENT: '1'
+
+      - name: Run extra smoke checks (gradle parser + doc subagent)
+        run: |
+          python ComicRack-Android/.copilot/subagent-flow/scripts/ci_smoke_checks.py
+
+      - name: Run full subagent checks (gradle->tasks, doc scanner, PR POC)
+        run: |
+          python ComicRack-Android/.copilot/subagent-flow/scripts/ci_full_subagent_checks.py

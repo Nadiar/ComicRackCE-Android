@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Fullscreen" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+    </style>
+    <style name="Defaultscreen" parent="@android:style/Theme.Holo">
+    </style>
+    <style name="DefaultDialog" parent="@android:style/Theme.Holo.Dialog">
+    </style>
+    <style name="DefaultDialogLight" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="DefaultPreferenceDialog" parent="@android:style/Theme.Holo">
+    </style>
+</resources>

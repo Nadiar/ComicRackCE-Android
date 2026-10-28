@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComicBook>
+    <Title>Watchmen #1</Title>
+    <Series>Watchmen</Series>
+    <Number>1</Number>
+    <Count>12</Count>
+    <Volume>1</Volume>
+    <Year>1986</Year>
+    <Month>9</Month>
+    <Day>1</Day>
+    <Writer>Alan Moore</Writer>
+    <Penciller>Dave Gibbons</Penciller>
+    <Inker>Dave Gibbons</Inker>
+    <Letterer>John Costanza</Letterer>
+    <CoverArtist>Dave Gibbons</CoverArtist>
+    <Publisher>DC Comics</Publisher>
+    <Imprint>DC</Imprint>
+    <Genre>Superhero,Drama,Mature</Genre>
+    <Web>https://www.dccomics.com/</Web>
+    <PageCount>32</PageCount>
+    <LanguageISO>en</LanguageISO>
+    <Format>Single</Format>
+    <BlackAndWhite>No</BlackAndWhite>
+    <Manga>No</Manga>
+    <Characters>The Comedian,Doctor Manhattan,The Nite Owl,The Silk Spectre,Rorschach,Ozymandias</Characters>
+    <Teams>Crimebusters</Teams>
+    <Locations>New York</Locations>
+    <Summary>A groundbreaking deconstruction of the superhero genre following a group of costumed vigilantes in an alternate 1985.</Summary>
+    <AgeRating>Mature 17+</AgeRating>
+</ComicBook>

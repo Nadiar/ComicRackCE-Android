@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="comic_list_background_dark">#ff303030</color>
+    <color name="comic_list_background_light">#ff404040</color>
+    <color name="library_list_background_dark">#ff101010</color>
+    <color name="library_list_background_light">#ff202020</color>
+</resources>
