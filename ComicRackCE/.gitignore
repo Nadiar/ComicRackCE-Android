@@ -46,7 +46,6 @@ desktop.ini
 # Local configuration (should not be committed)
 # ============================================
 local.properties
-gradle.properties
 
 # ============================================
 # Kotlin/KSP Generated Code
